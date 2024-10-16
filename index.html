@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes ">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0--">
+        <li class="text">정면 파사드</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1--">
+        <li class="text">안내원 제임스</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2--">
+        <li class="text">무인발급기 공간</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-">
+        <li class="text">도서반납공간</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-1-">
+        <li class="text">1층 로비</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-2--">
+        <li class="text">2층 로비 테라스뷰</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-2-">
+        <li class="text">2층 로비</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-2-">
+        <li class="text">2층 테라스내부</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-3-">
+        <li class="text">3층 로비</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-3-">
+        <li class="text">3층 사물함뷰</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10---">
+        <li class="text">디지털 자료실 입구</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11--">
+        <li class="text">디지털자료실 내부</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12--">
+        <li class="text">사무실 내부</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13--">
+        <li class="text">사물함 설명</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14---">
+        <li class="text">열람실 (남) 입구</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-">
+        <li class="text">열람실(남)내부</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16--">
+        <li class="text">열람실(여) 내부</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17--">
+        <li class="text">열람실(여) 입구</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18---">
+        <li class="text">자유 열람실 내부</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19---">
+        <li class="text">자유 열람실 입구</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20----">
+        <li class="text">청소년 종합 자료실 입구</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21--">
+        <li class="text">청소년 종합자료실</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22---">
+        <li class="text">청소년 프로그램실 입구</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23--">
+        <li class="text">청소년 프로그램실</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
